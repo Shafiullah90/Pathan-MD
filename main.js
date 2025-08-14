@@ -21,3 +21,8 @@ client.initialize();
 
 
 const commandHandler = require('./lib/commandHandler');
+client.on('message', async (message) => {
+  if (message.body.startsWith('.')) {
+    await commandHandler(client, message);
+  }
+});
