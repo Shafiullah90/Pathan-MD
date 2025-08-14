@@ -26,3 +26,17 @@ client.on('message', async (message) => {
     await commandHandler(client, message);
   }
 });
+
+
+
+
+const { Client } = require('@baileys/whatsapp-web.js');
+const settings = require('./settings');
+const client = new Client();
+const commandHandler = require('./lib/commandHandler');
+client.on('message', async (message) => {
+  if (message.body.startsWith('.')) {
+    await commandHandler.handleCommand(client, message);
+  }
+});
+client.initialize();
