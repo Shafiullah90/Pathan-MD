@@ -1,1 +1,13 @@
 
+{
+  "name": "haleemah-v5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@baileys/whatsapp-web.js": "^4.0.1"
+  }
+}
